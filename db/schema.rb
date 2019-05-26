@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_24_213614) do
+ActiveRecord::Schema.define(version: 2019_05_26_211859) do
 
   create_table "complaints", force: :cascade do |t|
     t.string "landlord_name"
@@ -19,6 +19,11 @@ ActiveRecord::Schema.define(version: 2019_05_24_213614) do
     t.string "address"
     t.string "complaint"
     t.datetime "complaintdate"
+    t.boolean "anti_complaints"
+    t.boolean "eviction_warning"
+    t.boolean "withhold_security_dep"
+    t.boolean "entered_wo_notice"
+    t.boolean "building_violation"
   end
 
 end

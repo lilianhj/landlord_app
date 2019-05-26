@@ -69,7 +69,7 @@ class ComplaintsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def complaint_params
-      params.require(:complaint).permit(:landlord_name, :address, :complaint, :complaintdate)
+      params.require(:complaint).permit(:landlord_name, :address, :complaint, :complaintdate, :eviction_warning, :building_violation, :entered_wo_notice, :withhold_security_dep, :anti_complaints)
 
     end
 end
