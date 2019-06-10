@@ -10,6 +10,10 @@
       <th>Nature of complaint</th>
       <th>Date of complaint</th>
       <th>Was there an eviction warning?</th>
+      <th>Was there a building violation?</th>
+      <th>Did the landlord enter without notice?</th>
+      <th>Did the landlord withhold the security deposit?</th>
+      <th>Did the landlord retaliate against complaints?</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,11 +21,15 @@
   <tbody>
     <% @complaints.each do |complaint| %>
       <tr>
-        <td>This landlord's name is <%= complaint.landlord_name %></td>
-        <td>The building's address is <%= complaint.address %></td>
-        <td>The nature of the complaint is <%= complaint.complaint %></td>
-        <td>The date of the complaint is <%= complaint.complaintdate %></td>
-        <td>There was an eviction warning is <%= complaint.eviction_warning %></td>
+        <td>Name: <%= complaint.landlord_name %></td>
+        <td>Address: <%= complaint.address %></td>
+        <td>Complaint: <%= complaint.complaint %></td>
+        <td>Date: <%= complaint.complaintdate %></td>
+        <td>Eviction warning? <%= complaint.eviction_warning %></td>
+        <td>Building violation? <%= complaint.building_violation %></td>
+        <td>Entered without notice? <%= complaint.entered_wo_notice %></td>
+        <td>Withheld security deposit? <%= complaint.withhold_security_dep %></td>
+        <td>Action against complaints? <%= complaint.anti_complaints %></td>
         <td><%= link_to 'Show', complaint %></td>
       </tr>
     <% end %>
