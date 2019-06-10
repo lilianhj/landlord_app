@@ -25,7 +25,7 @@ class ComplaintsController < ApplicationController
   # POST /complaints.json
   def create
     @complaint = Complaint.new(complaint_params)
-
+    # landlord = Landlord.find_or_create_by(:name => params[:complaint][:landlord_name])
     respond_to do |format|
       if @complaint.save
         format.html { redirect_to @complaint, notice: 'Complaint was successfully created.' }
