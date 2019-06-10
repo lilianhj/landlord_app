@@ -21,15 +21,15 @@
   <tbody>
     <% @complaints.each do |complaint| %>
       <tr>
-        <td><%= complaint.landlord_name %></td>
-        <td><%= complaint.address %></td>
-        <td><%= complaint.complaint %></td>
-        <td><%= complaint.complaintdate %></td>
-        <td><%= complaint.eviction_warning %></td>
-        <td><%= complaint.building_violation %></td>
-        <td><%= complaint.entered_wo_notice %></td>
-        <td><%= complaint.withhold_security_dep %></td>
-        <td><%= complaint.anti_complaints %></td>
+        <td align="center"><%= complaint.landlord_name %></td>
+        <td align="center"><%= complaint.address %></td>
+        <td align="center"><%= complaint.complaint %></td>
+        <td align="center"><%= complaint.complaintdate %></td>
+        <td align="center"><%= complaint.eviction_warning %></td>
+        <td align="center"><%= complaint.building_violation %></td>
+        <td align="center"><%= complaint.entered_wo_notice %></td>
+        <td align="center"><%= complaint.withhold_security_dep %></td>
+        <td align="center"><%= complaint.anti_complaints %></td>
         <!-- <td><%= link_to 'Show', complaint %></td>-->
       </tr>
     <% end %>
