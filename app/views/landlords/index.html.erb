@@ -12,6 +12,12 @@
   <thead>
     <tr>
       <th>Name</th>
+      <th>Total number of complaints</th>
+      <th>Number of eviction warning complaints</th>
+      <th>Number of building violation complaints</th>
+      <th>Number of entering without notice complaints</th>
+      <th>Number of withholding security deposit complaints</th>
+      <th>Number of anti-complaint complaints</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,6 +26,12 @@
     <% @landlords.each do |landlord| %>
       <tr>
         <td align="center"><%= landlord.name %></td>
+        <td align="center"><%= landlord.complaints.count %></td>
+        <td align="center"><%= landlord.complaints.where(eviction_warning: true).count %></td>
+        <td align="center"><%= landlord.complaints.where(building_violation: true).count %></td>
+        <td align="center"><%= landlord.complaints.where(entered_wo_notice: true).count %></td>
+        <td align="center"><%= landlord.complaints.where(withhold_security_dep: true).count %></td>
+        <td align="center"><%= landlord.complaints.where(anti_complaints: true).count %></td>
         <!--<td><%= link_to 'Show', landlord %></td>-->
         <!--<td><%= link_to 'Edit', edit_landlord_path(landlord) %></td>-->
         <!--<td><%= link_to 'Destroy', landlord, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->

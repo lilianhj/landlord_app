@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_10_232334) do
+ActiveRecord::Schema.define(version: 2019_06_11_044340) do
 
   create_table "complaints", force: :cascade do |t|
     t.string "landlord_name"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2019_06_10_232334) do
     t.boolean "entered_wo_notice"
     t.boolean "building_violation"
     t.integer "landlord_id"
+    t.index ["landlord_id"], name: "index_complaints_on_landlord_id"
   end
 
   create_table "landlords", force: :cascade do |t|

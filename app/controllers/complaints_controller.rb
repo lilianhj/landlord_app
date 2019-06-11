@@ -30,7 +30,7 @@ class ComplaintsController < ApplicationController
   # POST /complaints.json
   def create
     @complaint = Complaint.new(complaint_params)
-    landlord = Landlord.find_or_create_by(:name => params[:complaint][:landlord_name])
+    @complaint.landlord = Landlord.find_or_create_by(:name => params[:complaint][:landlord_name])
     respond_to do |format|
       if @complaint.save
         format.html { redirect_to @complaint, notice: 'Complaint was successfully created.' }
@@ -74,7 +74,7 @@ class ComplaintsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def complaint_params
-      params.require(:complaint).permit(:landlord_name, :address, :complaint, :complaintdate, :eviction_warning, :building_violation, :entered_wo_notice, :withhold_security_dep, :anti_complaints)
+      params.require(:complaint).permit(:landlord_name, :address, :complaint, :complaintdate, :eviction_warning, :building_violation, :entered_wo_notice, :withhold_security_dep, :anti_complaints, :landlord_id)
 
     end
 end
