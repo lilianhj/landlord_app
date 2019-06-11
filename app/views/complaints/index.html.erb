@@ -2,10 +2,10 @@
 
 <h1>Complaints</h1>
 
-<p><%= link_to 'Submit New Complaint', new_complaint_path %></p>
+<p><h3><%= link_to 'Submit New Complaint', new_complaint_path %></h3></p>
 <p><%= link_to 'Show All Landlords', landlords_path %></p>
 
-<p>Sort:
+<p><b>Sort:</b>
   <%= link_to "By Landlord Name", complaints_path(sort_by: :landlord_name) %>
 </p>
 
@@ -37,6 +37,7 @@
         <td align="center"><%= complaint.entered_wo_notice %></td>
         <td align="center"><%= complaint.withhold_security_dep %></td>
         <td align="center"><%= complaint.anti_complaints %></td>
+        <!--<td align="center"><%= complaint.landlord.try(:name) %></td>-->
         <!-- <td><%= link_to 'Show', complaint %></td>-->
       </tr>
     <% end %>
@@ -45,4 +46,4 @@
 
 <br>
 
-<%= link_to 'Submit New Complaint', new_complaint_path %>
+<h3><%= link_to 'Submit New Complaint', new_complaint_path %></h3>
