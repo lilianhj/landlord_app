@@ -26,9 +26,9 @@ require 'csv'
 csv_text = File.read(Rails.root.join('lib', 'seeds', 'Problem_Landlord_List.csv'))
 csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
 csv.each do |row|
-	# landlord = Landlord.find_or_create_by(:name => row['RESPONDENT'])
-	# Complaint.create(:landlord_id => landlord.id, :landlord_name => row['RESPONDENT'], :address => row['ADDRESS']) 
-    Complaint.create(:landlord_name => row['RESPONDENT'], :address => row['ADDRESS'])
+	landlord = Landlord.find_or_create_by(:name => row['RESPONDENT'])
+	Complaint.create(:landlord_id => landlord.id, :landlord_name => row['RESPONDENT'], :address => row['ADDRESS']) 
+    #Complaint.create(:landlord_name => row['RESPONDENT'], :address => row['ADDRESS'])
   end
 
 # then run: rake db:seed

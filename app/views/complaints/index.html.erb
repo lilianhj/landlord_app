@@ -2,7 +2,12 @@
 
 <h1>Complaints</h1>
 
-<%= link_to 'Submit New Complaint', new_complaint_path %>
+<p><%= link_to 'Submit New Complaint', new_complaint_path %></p>
+<p><%= link_to 'Show All Landlords', landlords_path %></p>
+
+<p>Sort:
+  <%= link_to "By Landlord Name", complaints_path(sort_by: :landlord_name) %>
+</p>
 
 <table>
   <thead>
