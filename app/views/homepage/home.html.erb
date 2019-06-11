@@ -1,62 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
 
-<!-- Header -->
-<header class="bg-primary py-5 mb-5">
-  <div class="container h-100">
-    <div class="row h-100 align-items-center">
-      <div class="col-lg-12">
-        <h1 class="display-4 text-white mt-5 mb-2">Problematic Landlord App</h1>
-        <p class="lead mb-5 text-white-50">Report and find problematic landlords near you.</p>
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Chicago Tenant Protection Project</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="public/theme/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="public/theme/css/business-frontpage.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#"><%= link_to("Complaints", "/complaints") %></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><%= link_to("Landlords", "/landlords") %></a>
+          </li>
+        </ul>
       </div>
     </div>
-  </div>
-</header>
+  </nav>
 
-<!-- Page Content -->
+  <!-- Header -->
+  <header class="bg-primary py-5 mb-5">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-lg-12">
+          <h1 class="display-4 text-white mt-5 mb-2">Chicago Tenant Protection Project</h1>
+          <p class="lead mb-5 text-white-50"></p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Content -->
   <div class="container">
 
     <div class="row">
       <div class="col-md-8 mb-5">
         <h2>What We Do</h2>
         <hr>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A deserunt neque tempore recusandae animi soluta quasi? Asperiores rem dolore eaque vel, porro, soluta unde debitis aliquam laboriosam. Repellat explicabo, maiores!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis optio neque consectetur consequatur magni in nisi, natus beatae quidem quam odit commodi ducimus totam eum, alias, adipisci nesciunt voluptate. Voluptatum.</p>
-        <a class="btn btn-primary btn-lg" href="#"><%= link_to("Add Complaint", "/complaints") %></a>
+        <p>The Chicago Tenant Protection Project collects and reports information on problematic landlords in the City of Chicago. Renters can report bad behavior to the city, but certain categories of behavior are not addressed. </p>
+        For example, while tenants can report building code violations, their only recourse for dealing with eviction notices is to go to court. There is no publicly accessible database that lists landlords who have attempted unfair evictions. </p>
+        This website aims to address this by providing an interface for tenants to submit complaints about their landlords, and view complaints submitted by others."</p>
       </div>
       <div class="col-md-4 mb-5">
         <h2>Contact Us</h2>
         <hr>
         <address>
-          <strong>Start Bootstrap</strong>
-          <br>3481 Melrose Place
-          <br>Beverly Hills, CA 90210
+          <strong></strong>
+          <br>John Crerar Library
+          <br> 5730 S Ellis Ave, Chicago, IL 60637
           <br>
         </address>
         <address>
-          <abbr title="Phone">P:</abbr>
-          (123) 456-7890
           <br>
           <abbr title="Email">E:</abbr>
-          <a href="mailto:#">name@example.com</a>
+          <a href="mailto:#">vedikaa@uchicago.edu</a>
         </address>
       </div>
     </div>
+    <!-- /.row -->
 
-    <!-- Footer -->
- <footer class="py-5 bg-dark">
-   <div class="container">
-     <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
-   </div>
-   <!-- /.container -->
- </footer>
+    <!-- Page Content -->
+    <div class="container">
 
- <!-- Bootstrap core JavaScript -->
- <script src="vendor/jquery/jquery.min.js"></script>
- <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <div class="row">
+      <div class="col-md-8 mb-5">
+        <h2>Landlord and Complaint Database</h2>
+        <a class="" href="#"><%= link_to("Add Complaint", "/complaints") %></a>
+        <a class="" href="#"><%= link_to("", "") %></a>
+        <a class="" href="#"><%= link_to("View All Landlords", "/landlords") %></a>
+        <p></p>
+      </div>
+    </div>
+      <!-- /.row -->
 
+    <!-- Page Content -->
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-8 mb-5">
+          <h2>Tenant Resources</h2>
+          <hr>  <a class="" href="#"><%= link_to("Tenant Resources", "/pages") %></a>
+          <p></p>
+        </div>
+      </div>
+      <!-- /.row -->
+
+
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <body>
-
-
 
 
 <h1></h1>
