@@ -4,7 +4,12 @@ class ComplaintsController < ApplicationController
   # GET /complaints
   # GET /complaints.json
   def index
-    @complaints = Complaint.all
+    #@complaints = Complaint.all
+    if params[:sort_by]
+      @complaints = Complaint.all.sort_by{|d| d.send(params[:sort_by]) }
+    else
+      @complaints = Complaint.all
+    end
   end
 
   # GET /complaints/1
@@ -25,7 +30,7 @@ class ComplaintsController < ApplicationController
   # POST /complaints.json
   def create
     @complaint = Complaint.new(complaint_params)
-
+    landlord = Landlord.find_or_create_by(:name => params[:complaint][:landlord_name])
     respond_to do |format|
       if @complaint.save
         format.html { redirect_to @complaint, notice: 'Complaint was successfully created.' }
