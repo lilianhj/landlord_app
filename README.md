@@ -1,24 +1,5 @@
-# README
+# Chicago Tenant Protection Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Our Civic Tech final project on problematic landlords in Chicago, using data from the City of Chicago Data Portal.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Deployed live [here](https://powerful-brushlands-69081.herokuapp.com/).
